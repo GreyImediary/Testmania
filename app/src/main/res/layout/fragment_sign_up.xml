@@ -1,8 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_log_in_screen">
 
+    <TextView
+        android:id="@+id/fr_sign_up_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_126dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/testmania_title"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/text_size_50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fr_sign_up_login"
+        style="@style/LightTextInput"
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_25dp"
+        android:layout_marginTop="@dimen/dimen_75dp"
+        android:layout_marginEnd="@dimen/dimen_25dp"
+        android:hint="@string/login_hint"
+        app:boxStrokeColor="@color/colorPrimary"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fr_sign_up_title">
 
-</LinearLayout>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fr_sign_up_login_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColor="@color/colorPrimary" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fr_sign_up_password"
+        style="@style/LightTextInput"
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_25dp"
+        android:layout_marginTop="@dimen/dimen_16dp"
+        android:layout_marginEnd="@dimen/dimen_25dp"
+        android:hint="@string/password_hint"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fr_sign_up_login">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fr_sign_up_password_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:textColor="@color/colorPrimary" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fr_sign_up_button_in"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_40dp"
+        android:text="@string/sign_up_button_text"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="@id/fr_sign_up_password"
+        app:layout_constraintStart_toStartOf="@id/fr_sign_up_password"
+        app:layout_constraintTop_toBottomOf="@id/fr_sign_up_password"
+        app:rippleColor="#c6c6c6" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fr_sign_up_button_sign"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/log_in_button_text"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="@id/fr_sign_up_button_in"
+        app:layout_constraintStart_toStartOf="@id/fr_sign_up_button_in"
+        app:layout_constraintTop_toBottomOf="@id/fr_sign_up_button_in" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
