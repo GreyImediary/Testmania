@@ -24,14 +24,14 @@
         android:layout_width="@dimen/dimen_0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dimen_25dp"
-        android:layout_marginTop="@dimen/dimen_16dp"
+        android:layout_marginTop="@dimen/dimen_75dp"
         android:layout_marginEnd="@dimen/dimen_25dp"
         android:hint="@string/login_hint"
         app:boxStrokeColor="@color/colorPrimary"
         app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/fr_sign_up_name">
+        app:layout_constraintTop_toBottomOf="@id/fr_sign_up_title">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/fr_sign_up_login_edit"
@@ -45,31 +45,6 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/fr_sign_up_name"
-        style="@style/LightTextInput"
-        android:layout_width="@dimen/dimen_0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dimen_25dp"
-        android:layout_marginTop="@dimen/dimen_75dp"
-        android:layout_marginEnd="@dimen/dimen_25dp"
-        android:hint="@string/name_hint"
-        app:boxStrokeColor="@color/colorPrimary"
-        app:errorEnabled="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/fr_sign_up_title">
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/fr_sign_up_name_edit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:imeOptions="actionNext"
-        android:inputType="text"
-        android:maxLines="1"
-        android:textColor="@color/colorPrimary" />
-    </com.google.android.material.textfield.TextInputLayout>/
-
-    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/fr_sign_up_password"
         style="@style/LightTextInput"
         android:layout_width="@dimen/dimen_0dp"
@@ -79,6 +54,7 @@
         android:layout_marginEnd="@dimen/dimen_25dp"
         android:hint="@string/password_hint"
         app:errorEnabled="true"
+        app:helperTextTextColor="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/fr_sign_up_login">

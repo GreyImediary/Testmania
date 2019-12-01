@@ -13,6 +13,7 @@ buildscript {
 
         //Net
         retrofit_version = '2.6.2'
+        okhttp_version = '4.2.1'
 
         //UI
         material_components_version = '1.2.0-alpha02'

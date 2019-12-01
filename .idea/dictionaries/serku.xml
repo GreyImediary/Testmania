@@ -2,6 +2,7 @@
   <dictionary name="serku">
     <words>
       <w>coroutines</w>
+      <w>gson</w>
       <w>jetpack</w>
       <w>testmania</w>
     </words>
