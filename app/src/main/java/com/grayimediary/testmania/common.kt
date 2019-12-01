@@ -15,25 +15,6 @@ import kotlin.coroutines.suspendCoroutine
 //aliases
 typealias AnyMap = Map<String, Any>
 
-//net
-suspend fun <T> Call<T>.await(): T {
-    return suspendCoroutine {
-        enqueue(object : Callback<T> {
-            override fun onFailure(call: Call<T>, t: Throwable) {
-                it.resumeWithException(t)
-            }
-
-            override fun onResponse(call: Call<T>, response: Response<T>) {
-                if (response.body() != null) {
-                    it.resume(response.body()!!)
-                } else {
-                    it.resumeWithException(NullPointerException())
-                }
-            }
-
-        })
-    }
-}
 
 //Ui
 fun View.gone() { visibility = View.GONE }
