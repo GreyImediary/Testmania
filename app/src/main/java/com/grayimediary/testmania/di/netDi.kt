@@ -1,6 +1,7 @@
 package com.grayimediary.testmania.di
 
 import com.grayimediary.testmania.di.NetProperties.BASE_URL
+import com.grayimediary.testmania.net.TestApi
 import com.grayimediary.testmania.net.UserApi
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -39,5 +40,6 @@ val apiModule = module {
     single { getLoggingInterceptor() }
     single { getClient(get()) }
     single { createRetrofit<UserApi>(get(named(BASE_URL)), get(), get()) }
+    single { createRetrofit<TestApi>(get(named(BASE_URL)), get(), get()) }
 }
 

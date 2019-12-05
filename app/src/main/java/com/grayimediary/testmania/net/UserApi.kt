@@ -11,7 +11,8 @@ interface UserApi {
     @GET("/user/auth")
     fun auth(
         @Query("login") login: String,
-        @Query("password") password: String): Call<AuthResponse>
+        @Query("password") password: String
+    ): Call<AuthResponse>
 
     @GET("/user/{id}")
     fun getUserById(@Path("id") id: Int): Call<User>
@@ -20,7 +21,7 @@ interface UserApi {
     fun createUser(@Body postUser: PostUser): Call<User>
 
     @PUT("/user/{id}")
-        fun updateTest(@Path("id") id: Int, @Body updateTest: UpdateTest): Call<User>
+    fun updateTest(@Path("id") id: Int, @Body updateTest: UpdateTest): Call<User>
 
     @DELETE("/user/{id}")
     fun deleteUser(@Path("id") id: Int): Call<AnyMap>
