@@ -46,8 +46,8 @@ class UserRepository(private val userApi: UserApi) {
         try {
             val response = userApi.deleteUser(id).await()
 
-            val affected = response["affected"] as? Boolean
-            affected ?: false
+            val affected = (response["affected"] as Double).toInt()
+            affected == 1
         } catch (t: Throwable) {
             throw t
         }

@@ -38,6 +38,6 @@ val apiModule = module {
     single { getGsonConverter() }
     single { getLoggingInterceptor() }
     single { getClient(get()) }
-    single { createRetrofit<UserApi>(get(), get(), get()) }
+    single { createRetrofit<UserApi>(get(named(BASE_URL)), get(), get()) }
 }
 
