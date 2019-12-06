@@ -4,7 +4,6 @@ import com.google.common.truth.Truth.assertThat
 import com.grayimediary.testmania.di.apiModule
 import com.grayimediary.testmania.di.repositoryModule
 import com.grayimediary.testmania.repository.UserRepository
-import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.runBlocking
 import org.junit.After
 import org.junit.Before
@@ -16,7 +15,7 @@ import org.koin.test.inject
 
 class UserRepositoryTest : KoinTest {
     private val userRepository: UserRepository by inject()
-    var userId: Int = 0
+    private var userId: Int = 0
 
     @Before
     fun setUp() {

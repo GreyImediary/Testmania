@@ -17,7 +17,7 @@ import org.koin.test.inject
 
 class TestRepositoryTest : KoinTest {
     private val testRepository: TestRepository by inject()
-    var testId = 0
+    private var testId = 0
 
     @Before
     fun setUp() {
