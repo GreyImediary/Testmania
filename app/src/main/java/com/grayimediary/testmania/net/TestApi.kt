@@ -26,5 +26,5 @@ data class PostTest(
     val description: String,
     val questions: ArrayList<Question>,
     @SerializedName("createdBy")
-    val authorLogin: String
+    val authorId: Int
 )

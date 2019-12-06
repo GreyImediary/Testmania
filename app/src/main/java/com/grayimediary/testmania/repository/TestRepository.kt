@@ -34,7 +34,10 @@ class TestRepository(private val testApi: TestApi) {
 
     suspend fun deleteTest(id: Int) = withContext(Dispatchers.IO) {
         try {
-            testApi.deleteTest(id).await()
+            val response = testApi.deleteTest(id).await()
+
+            val affected = (response["affected"] as Double).toInt()
+            affected == 1
         } catch (t: Throwable) {
             throw t
         }
