@@ -38,7 +38,7 @@ class TestRepositoryTest : KoinTest {
     }
 
     @Test
-    fun when_TestIdNot0_Expect_UserCreated() {
+    fun when_TestIdNot0_Expect_TestCreated() {
         assertThat(testId).isNotEqualTo(0)
     }
 
