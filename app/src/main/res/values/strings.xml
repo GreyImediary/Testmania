@@ -8,7 +8,28 @@
     <string name="sign_up_button_text">Sign up</string>
 
     <!--log screen hints-->
-    <string name="name_hint">Your name</string>
+    <string name="email_hint">Email</string>
     <string name="login_hint">Login</string>
     <string name="password_hint">Password</string>
+
+
+    <!--main screen strings-->
+    <string name="tests_title">Все тесты</string>
+    <string name="create_test">Создать тест</string>
+    <string name="exit">Выйти</string>
+    <string name="created_tests">Созданные</string>
+    <string name="passed_tests">Пройдённые</string>
+
+    <!--image descriptions-->
+    <string name="delete_button_desc">Delete button</string>
+
+    <!--errors-->
+    <string name="screen_log_login_error">Enter the login</string>
+    <string name="screen_log_password_error">Enter the password</string>
+    <string name="screen_log_email_error">Enter the email</string>
+
+    <string name="fragment_sign_up_email_valid_error">Email not valid</string>
+
+    <string name="wrong_login_pass_error">Wrong login or password</string>
+    <string name="error">Error was occurred, try again, please</string>
 </resources>

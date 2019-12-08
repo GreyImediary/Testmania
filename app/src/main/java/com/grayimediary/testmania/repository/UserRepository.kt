@@ -18,6 +18,14 @@ class UserRepository(private val userApi: UserApi) {
             }
         }
 
+    suspend fun getUserByLogin(login: String) = withContext(Dispatchers.IO) {
+        try {
+            userApi.getUserByLogin(login).await()
+        } catch (t: Throwable) {
+            throw t
+        }
+    }
+
     suspend fun getUserById(id: Int) = withContext(Dispatchers.IO) {
         try {
             userApi.getUserById(id).await()

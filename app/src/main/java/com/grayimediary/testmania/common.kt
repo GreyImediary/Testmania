@@ -5,12 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
-import kotlin.coroutines.resume
-import kotlin.coroutines.resumeWithException
-import kotlin.coroutines.suspendCoroutine
+import com.google.android.material.textfield.TextInputLayout
 
 //aliases
 typealias AnyMap = Map<String, Any>
@@ -26,3 +21,12 @@ fun ViewGroup.inflate(resId: Int, attachToRoot: Boolean = false) =
 
 fun Context.toast(text: String) = Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
 fun Context.toast(textId: Int) = Toast.makeText(this, textId, Toast.LENGTH_SHORT).show()
+
+fun assertEditInput(input: TextInputLayout, errorText: String) {
+    if (input.editText?.text.isNullOrBlank()) {
+        input.error = errorText
+        throw NullPointerException()
+    } else {
+        input.error = null
+    }
+}

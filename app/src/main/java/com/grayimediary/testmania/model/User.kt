@@ -1,6 +1,7 @@
 package com.grayimediary.testmania.model
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class User(
     @SerializedName("id")
@@ -23,7 +24,7 @@ data class User(
 
     @SerializedName("createdTests")
     val createdTests: ArrayList<CreatedTest>
-)
+) : Serializable
 
 data class CreatedTest(
     @SerializedName("id")
@@ -37,7 +38,7 @@ data class CreatedTest(
 
     @SerializedName("createdAt")
     val createdAt: String
-)
+) : Serializable
 
 data class FinishedTest(
     @SerializedName("id")
@@ -45,4 +46,4 @@ data class FinishedTest(
 
     @SerializedName("result")
     val result: ArrayList<Boolean>
-)
+) : Serializable

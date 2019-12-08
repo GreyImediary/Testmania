@@ -14,6 +14,9 @@ interface UserApi {
         @Query("password") password: String
     ): Call<AuthResponse>
 
+    @GET("/user")
+    fun getUserByLogin(@Query("login") login: String): Call<User>
+
     @GET("/user/{id}")
     fun getUserById(@Path("id") id: Int): Call<User>
 
