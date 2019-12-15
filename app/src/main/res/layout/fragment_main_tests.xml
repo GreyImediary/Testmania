@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_main_screen"
+    android:paddingTop="@dimen/dimen_25dp"
     android:paddingStart="@dimen/dimen_25dp"
     android:paddingEnd="@dimen/dimen_25dp">
 
@@ -45,6 +46,7 @@
         app:strokeColor="@color/colorPrimary" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_all_tests"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dimen_0dp"
         android:layout_marginTop="@dimen/dimen_20dp"

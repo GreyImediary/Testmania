@@ -4,13 +4,13 @@
     <!--log screen-->
     <string name="testmania_title">TESTMANIA</string>
 
-    <string name="log_in_button_text">Log in</string>
-    <string name="sign_up_button_text">Sign up</string>
+    <string name="log_in_button_text">Войти</string>
+    <string name="sign_up_button_text">Заарегистрироваться</string>
 
     <!--log screen hints-->
-    <string name="email_hint">Email</string>
-    <string name="login_hint">Login</string>
-    <string name="password_hint">Password</string>
+    <string name="email_hint">Почта</string>
+    <string name="login_hint">Логин</string>
+    <string name="password_hint">Пароль</string>
 
 
     <!--main screen strings-->
@@ -19,17 +19,38 @@
     <string name="exit">Выйти</string>
     <string name="created_tests">Созданные</string>
     <string name="passed_tests">Пройдённые</string>
+    <string name="test_deleted">Тест удалён</string>
+
+    <!--test strings-->
+    <string name="answer">Ответьте на вопрос</string>
+    <string name="next">Далее</string>
+    <string name="prev">Назад</string>
+    <string name="retry">Повторить</string>
+    <string name="test_list">Список тестов</string>
+    <string name="results">Результаты</string>
+
+    <!--create test-->
+    <string name="test_name_hint">Название теста</string>
+    <string name="question_hint">Вопрос</string>
+    <string name="option_1_hint">Вариант 1</string>
+    <string name="option_2_hint">Вариант 2</string>
+    <string name="option_3_hint">Вариант 3</string>
+    <string name="option_4_hint">Вариант 4</string>
+    <string name="right_option">Правильный ответ\n(указать номер варианта)</string>
+
+    <!--test adapter strings-->
+    <string name="question_count">Вопросов: %d</string>
 
     <!--image descriptions-->
     <string name="delete_button_desc">Delete button</string>
 
     <!--errors-->
-    <string name="screen_log_login_error">Enter the login</string>
-    <string name="screen_log_password_error">Enter the password</string>
-    <string name="screen_log_email_error">Enter the email</string>
+    <string name="screen_log_login_error">Введите логин</string>
+    <string name="screen_log_password_error">Введите пароль</string>
+    <string name="screen_log_email_error">Введите почту</string>
 
-    <string name="fragment_sign_up_email_valid_error">Email not valid</string>
+    <string name="fragment_sign_up_email_valid_error">Почта не валидна</string>
 
-    <string name="wrong_login_pass_error">Wrong login or password</string>
+    <string name="wrong_login_pass_error">Неправильный логин или пароль</string>
     <string name="error">Error was occurred, try again, please</string>
 </resources>
