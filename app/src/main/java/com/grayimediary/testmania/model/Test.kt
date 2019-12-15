@@ -1,6 +1,7 @@
 package com.grayimediary.testmania.model
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class Test(
     val id: Int,
@@ -10,7 +11,7 @@ data class Test(
     @SerializedName("createdBy")
     val authorLogin: String,
     val createdAt: String
-)
+) : Serializable
 
 
 data class Question(
@@ -22,4 +23,4 @@ data class Question(
 
     @SerializedName("rightOptionId")
     val answerNumber: Int
-)
+) : Serializable

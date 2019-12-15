@@ -5,6 +5,8 @@
     <color name="colorAccent">#136A8A</color>
     <color name="colorTestRed">#F0576C</color>
     <color name="colorResultRed">#E53935</color>
+    <color name="colorResultOrange">#F46B45</color>
+    <color name="colorResultGreen">#11998E</color>
 
     <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#fafafa</color>
 </resources>

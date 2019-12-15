@@ -1,5 +1,6 @@
 package com.grayimediary.testmania.viewModel
 
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -48,6 +49,7 @@ class LogInViewModel(private val userRepository: UserRepository) : ViewModel() {
             try {
                 job()
             } catch (t: Throwable) {
+                Log.e("LoginViewModelError", t.message!!)
                 toastLive.value = R.string.error
                 progressBarLive.value = false
             }

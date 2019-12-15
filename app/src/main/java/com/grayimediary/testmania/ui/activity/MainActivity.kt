@@ -27,7 +27,7 @@ class MainActivity : FragmentActivity() {
 
         user = intent.getSerializableExtra(USER_EXTRA) as User
 
-        val allTestFragment = AllTestsFragment.newInstance(user.login)
+        val allTestFragment = AllTestsFragment.newInstance(user.login, user)
         val profileFragment = ProfileFragment.newInstance(user)
 
         val adapter = MainPagerAdapter(supportFragmentManager, listOf(allTestFragment, profileFragment))

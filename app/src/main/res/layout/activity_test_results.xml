@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/result_container"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_finish_screen_bad"
+    android:padding="@dimen/dimen_16dp">
+
+    <TextView
+        android:id="@+id/results_title"
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/results"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/text_size_35sp"
+        app:layout_constraintEnd_toStartOf="@id/right_answer_count"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/right_answer_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@id/results_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/results_title"
+        tools:text="0 из 4" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_test_results"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_0dp"
+        android:layout_marginTop="@dimen/dimen_16dp"
+        android:layout_marginBottom="@dimen/dimen_16dp"
+        tools:listitem="@layout/item_result"
+        android:background="@drawable/background_rectangle_rounded_corners"
+        android:padding="@dimen/dimen_16dp"
+        app:layout_constraintBottom_toTopOf="@id/test_list"
+        app:layout_constraintTop_toBottomOf="@id/results_title" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/test_list"
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/test_list"
+        android:textColor="@color/colorTestRed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

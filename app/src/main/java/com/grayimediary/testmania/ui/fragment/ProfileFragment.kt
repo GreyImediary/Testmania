@@ -12,13 +12,11 @@ import androidx.core.content.edit
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.grayimediary.testmania.LOGIN_KEY
-import com.grayimediary.testmania.R
-import com.grayimediary.testmania.USER_EXTRA
+import com.grayimediary.testmania.*
 import com.grayimediary.testmania.model.User
-import com.grayimediary.testmania.prefName
 import com.grayimediary.testmania.ui.activity.LogActivity
 import com.grayimediary.testmania.ui.activity.MainActivity
+import com.grayimediary.testmania.ui.activity.TestActivity
 import com.grayimediary.testmania.ui.adapter.TestAdapter
 import com.grayimediary.testmania.viewModel.MainViewModel
 import kotlinx.android.synthetic.main.fragment_main_profile.*
@@ -90,9 +88,7 @@ class ProfileFragment : Fragment() {
         viewModel.finishedTestsLive.observe(this, Observer {
             val adapter = TestAdapter(
                 user.login,
-                onTestClick = { test ->
-
-                },
+                onTestClick = { test -> },
                 onDeleteClick = { id -> }
             ).apply {
                 tests = it
