@@ -7,15 +7,18 @@ import com.grayimediary.testmania.R
 import com.grayimediary.testmania.model.CreatedTest
 import com.grayimediary.testmania.model.FinishedTest
 import com.grayimediary.testmania.model.Test
+import com.grayimediary.testmania.model.User
 import com.grayimediary.testmania.repository.TestRepository
+import com.grayimediary.testmania.repository.UserRepository
 import kotlinx.coroutines.launch
 
-class MainViewModel(private val testRepository: TestRepository) : ViewModel() {
+class MainViewModel(private val testRepository: TestRepository, private val userRepository: UserRepository) : ViewModel() {
     val progressBarLive = SingleLiveEvent<Boolean>()
     val testsLive = MutableLiveData<List<Test>>()
     val finishedTestsLive = MutableLiveData<List<Test>>()
     val createdTestsLive = MutableLiveData<List<Test>>()
     val toastLive = SingleLiveEvent<Int>()
+    val userLive = MutableLiveData<User>()
 
     fun getTests() {
         doJob {
@@ -36,6 +39,15 @@ class MainViewModel(private val testRepository: TestRepository) : ViewModel() {
             } else {
                 toastLive.value = R.string.error
             }
+        }
+    }
+
+    fun getUser(id: Int) {
+        viewModelScope.launch {
+            try {
+                val user = userRepository.getUserById(id)
+                userLive.value = user
+            } catch (t: Throwable) {}
         }
     }
 

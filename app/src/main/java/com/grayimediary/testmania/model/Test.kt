@@ -16,11 +16,11 @@ data class Test(
 
 data class Question(
     @SerializedName("text")
-    val questionTitle: String,
+    var questionTitle: String,
 
     @SerializedName("options")
-    val options: ArrayList<String>,
+    var options: ArrayList<String>,
 
     @SerializedName("rightOptionId")
-    val answerNumber: Int
+    var answerNumber: Int
 ) : Serializable

@@ -48,6 +48,11 @@ class ProfileFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_main_profile, null)
     }
 
+    override fun onResume() {
+        viewModel.getUser(user.id)
+        super.onResume()
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -96,6 +101,11 @@ class ProfileFragment : Fragment() {
 
             rv_passed_tests.adapter = adapter
             rv_passed_tests.layoutManager = LinearLayoutManager(context)
+        })
+
+        viewModel.userLive.observe(this, Observer {
+            viewModel.getCreatedTests(it.createdTests)
+            viewModel.getFinishedTests(it.finishedTests)
         })
     }
 }

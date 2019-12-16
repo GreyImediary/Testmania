@@ -11,6 +11,7 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.grayimediary.testmania.*
 import com.grayimediary.testmania.model.User
+import com.grayimediary.testmania.ui.activity.CreateTestActivity
 import com.grayimediary.testmania.ui.activity.MainActivity
 import com.grayimediary.testmania.ui.activity.TestActivity
 import com.grayimediary.testmania.ui.adapter.TestAdapter
@@ -55,6 +56,13 @@ class AllTestsFragment : Fragment() {
         viewModel.getTests()
 
         observeLiveData()
+
+        button_create_test.setOnClickListener {
+            val intent = Intent(activity, CreateTestActivity::class.java).apply {
+                putExtra(USER_ID, user.id)
+            }
+            activity?.startActivity(intent)
+        }
     }
 
     private fun observeLiveData() {

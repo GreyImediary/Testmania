@@ -38,6 +38,11 @@ class MainActivity : FragmentActivity() {
         tabs.getTabAt(1)?.icon = getDrawable(R.drawable.ic_profile)
     }
 
+    override fun onResume() {
+        super.onResume()
+        viewModel.getTests()
+    }
+
     fun deleteTest(id: Int) {
         viewModel.deleteTest(id)
         viewModel.getTests()

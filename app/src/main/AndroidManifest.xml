@@ -13,8 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.activity.ResultActivity"></activity>
-        <activity android:name=".ui.activity.TestActivity" />
+        <activity
+            android:name=".ui.activity.ResultActivity"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name=".ui.activity.TestActivity"
+            android:screenOrientation="locked" />
         <activity
             android:name=".ui.activity.LogActivity"
             android:screenOrientation="locked">
@@ -26,6 +30,9 @@
         </activity>
         <activity
             android:name=".ui.activity.MainActivity"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".ui.activity.CreateTestActivity"
             android:screenOrientation="locked" />
     </application>
 
