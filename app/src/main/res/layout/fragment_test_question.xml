@@ -1,121 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_test_screen"
-    android:orientation="vertical"
-    android:padding="@dimen/dimen_16dp">
+    android:background="@drawable/background_test_screen">
 
-    <TextView
-        android:id="@+id/question_count"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/colorPrimary"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="1 из 3" />
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:background="@android:color/transparent"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen_16dp">
 
-    <TextView
-        android:id="@+id/question_answer_text"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_bold"
-        android:text="@string/answer"
-        android:textColor="@color/colorPrimary"
-        android:textSize="@dimen/text_size_35sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/question_count" />
+        <TextView
+            android:id="@+id/question_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="1 из 3" />
 
-    <TextView
-        android:id="@+id/question_title"
-        android:layout_width="@dimen/dimen_0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/background_rectangle_rounded_corners"
-        android:fontFamily="@font/roboto_bold"
-        android:paddingTop="@dimen/dimen_25dp"
-        android:paddingBottom="@dimen/dimen_25dp"
-        android:textAlignment="center"
-        android:textColor="@color/colorTestRed"
-        android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/question_answer_text"
-        tools:text="Какого цвета вода?" />
+        <TextView
+            android:id="@+id/question_answer_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/answer"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_35sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/question_count" />
 
-    <TextView
-        android:id="@+id/option_1"
-        android:layout_width="@dimen/dimen_0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dimen_25dp"
-        android:background="@drawable/background_option_stroke"
-        android:fontFamily="@font/roboto"
-        android:padding="@dimen/dimen_16dp"
-        android:textColor="@color/colorPrimary"
-        android:textSize="@dimen/text_size_20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/question_title"
-        tools:text="Жёлтая" />
+        <TextView
+            android:id="@+id/question_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/background_rectangle_rounded_corners"
+            android:fontFamily="@font/roboto_bold"
+            android:paddingTop="@dimen/dimen_25dp"
+            android:paddingBottom="@dimen/dimen_25dp"
+            android:textAlignment="center"
+            android:textColor="@color/colorTestRed"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/question_answer_text"
+            tools:text="Какого цвета вода?" />
 
-    <TextView
-        android:id="@+id/option_2"
-        android:layout_width="@dimen/dimen_0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dimen_25dp"
-        android:background="@drawable/background_option_stroke"
-        android:fontFamily="@font/roboto"
-        android:padding="@dimen/dimen_16dp"
-        android:textColor="@color/colorPrimary"
-        android:textSize="@dimen/text_size_20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/option_1"
-        tools:text="Жёлтая" />
+        <TextView
+            android:id="@+id/option_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_25dp"
+            android:background="@drawable/background_option_stroke"
+            android:fontFamily="@font/roboto"
+            android:padding="@dimen/dimen_16dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/question_title"
+            tools:text="Жёлтая" />
 
-    <TextView
-        android:id="@+id/option_3"
-        android:layout_width="@dimen/dimen_0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dimen_25dp"
-        android:background="@drawable/background_option_stroke"
-        android:fontFamily="@font/roboto"
-        android:padding="@dimen/dimen_16dp"
-        android:textColor="@color/colorPrimary"
-        android:textSize="@dimen/text_size_20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/option_2"
-        tools:text="Жёлтая" />
+        <TextView
+            android:id="@+id/option_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_25dp"
+            android:background="@drawable/background_option_stroke"
+            android:fontFamily="@font/roboto"
+            android:padding="@dimen/dimen_16dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/option_1"
+            tools:text="Жёлтая" />
 
-    <TextView
-        android:id="@+id/option_4"
-        android:layout_width="@dimen/dimen_0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dimen_25dp"
-        android:background="@drawable/background_option_stroke"
-        android:fontFamily="@font/roboto"
-        android:padding="@dimen/dimen_16dp"
-        android:textColor="@color/colorPrimary"
-        android:textSize="@dimen/text_size_20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/option_3"
-        tools:text="Жёлтая" />
+        <TextView
+            android:id="@+id/option_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_25dp"
+            android:background="@drawable/background_option_stroke"
+            android:fontFamily="@font/roboto"
+            android:padding="@dimen/dimen_16dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/option_2"
+            tools:text="Жёлтая" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_next"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dimen_25dp"
-        android:text="@string/next"
-        android:textColor="@color/colorTestRed"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/option_4" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/option_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_25dp"
+            android:background="@drawable/background_option_stroke"
+            android:fontFamily="@font/roboto"
+            android:padding="@dimen/dimen_16dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/option_3"
+            tools:text="Жёлтая" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_25dp"
+            android:text="@string/next"
+            android:textColor="@color/colorTestRed"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/option_4" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

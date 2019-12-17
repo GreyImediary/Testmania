@@ -91,6 +91,7 @@ class TestFragment : Fragment() {
             option_4.setTextColor(ContextCompat.getColor(context!!, R.color.colorPrimary))
 
             chosenIndex = 1
+            resultText = option_1.text.toString()
         }
 
         option_2.setOnClickListener {
@@ -107,6 +108,7 @@ class TestFragment : Fragment() {
             option_4.setTextColor(ContextCompat.getColor(context!!, R.color.colorPrimary))
 
             chosenIndex = 2
+            resultText = option_2.text.toString()
         }
 
         option_3.setOnClickListener {
@@ -123,6 +125,7 @@ class TestFragment : Fragment() {
             option_4.setTextColor(ContextCompat.getColor(context!!, R.color.colorPrimary))
 
             chosenIndex = 3
+            resultText = option_3.text.toString()
         }
 
         option_4.setOnClickListener {
@@ -139,6 +142,7 @@ class TestFragment : Fragment() {
             option_1.setTextColor(ContextCompat.getColor(context!!, R.color.colorPrimary))
 
             chosenIndex = 4
+            resultText = option_4.text.toString()
         }
     }
 
