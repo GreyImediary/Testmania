@@ -5,7 +5,7 @@
 ![screenshot #4](https://sun9-52.userapi.com/c200628/v200628389/13384/7NZZofDG_Ek.jpg)
 ![screenshot #5](https://sun9-47.userapi.com/c200628/v200628389/1338b/sSz2gRmMh6M.jpg)
 
-### Опсиание
+### Описание
 
 Приложение для создания и прохождения тестов. В приложении вы можете:
 - Проходить тесты
